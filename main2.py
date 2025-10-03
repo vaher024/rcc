@@ -10,7 +10,7 @@ def definitive_analysis(xml_file):
     with open(xml_file, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Task 1: Total generator capacity - Both methods agree (1500 MW)
+    # Task 1: Total generator capacity
     print("\n1. TOTAL PRODUCTION CAPACITY")
     total_capacity = 0
     generating_units = re.findall(
@@ -104,7 +104,7 @@ def definitive_analysis(xml_file):
     
     print("   Difference: PATL is for continuous operation, TATL allows temporary overload (10 minutes)")
     
-    # Task 4: Slack generator identification - test.py approach is correct
+    # Task 4: Slack generator identification
     print("\n4. SLACK GENERATOR IDENTIFICATION")
     
     sync_machines = re.findall(
@@ -129,7 +129,7 @@ def definitive_analysis(xml_file):
     
     print("   Why slack node needed: Provides voltage reference and balances active power in load flow calculations")
     
-    # Task 5: Model issues - Both methods identified issues
+    # Task 5: Model issues
     print("\n5. MODEL ISSUES DETECTED")
     
     issues = []
